@@ -20,7 +20,7 @@
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                     <li>
-                        <form action="keluar" method="post">
+                        <form action="/RentalMobil/keluar" method="post">
                             @csrf
                             <button type="submit" class="dropdown-item"> Logout </button>
                         </form>
@@ -29,8 +29,8 @@
              </li>
         </ul>
             @else
-            <a href="masuk" class="text-sm text-gray-700 dark:text-gray-500 underline">Masuk</a>
-            <a href="registrasi" class="ml-4 text-sm text-gray-700 dark:text-gray-500 underline">Registrasi</a>
+            <a href="/RentalMobil/masuk" class="text-sm text-gray-700 dark:text-gray-500 underline">Masuk</a>
+            <a href="/RentalMobil/registrasi" class="ml-4 text-sm text-gray-700 dark:text-gray-500 underline">Registrasi</a>
         @endauth
 
         <i class="bi bi-list mobile-nav-toggle"></i>
