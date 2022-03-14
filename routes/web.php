@@ -29,45 +29,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-// Auth::routes(['register' => true]);
-
-// Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-
-// //Hanya untuk role admin
-// Route::group(['prefix' => 'admin', 'middleware' => ['auth', 'role:admin']], function () {
-//     Route::get('/', function () {
-//         return 'halaman admin';
-//     });
-
-//     Route::get('profile', function () {
-//         return 'halaman profile admin';
-//     });
-// });
-
-//Hanya untuk role pengguna
-// Route::group(['prefix' => 'pengguna', 'middleware' => ['auth', 'role:pengguna']], function () {
-//     Route::get('/', function () {
-//         return 'halaman pengguna';
-//     });
-
-//     Route::get('profile', function () {
-//         return 'halaman profile pengguna';
-//     });
-// });
-
-// Route::group(['prefix' => 'admin', 'middleware' => ['auth']], function () {
-//     Route::get('driver', function () {
-//         return view('driver.index');
-//     })->middleware(['role:admin|pengguna']);
-
-// });
-
-// Route::resource('admin/driver', DriverController::class)->middleware(['role:admin']);
-// Route::resource('admin/penyewa', PenyewaController::class)->middleware(['role:admin']);
-// Route::resource('admin/mobil', MobilController::class)->middleware(['role:admin']);
-// Route::resource('admin/sewa', SewaController::class)->middleware(['role:admin']);
-// Route::resource('admin/transaksi', TransaksiController::class)->middleware(['role:admin']);
-// Route::resource('admin/jenis', JenisMobil::class)->middleware('auth');
 
 Route::prefix('RentalMobil')->group(function () {
     Route::get('beranda', function () {
@@ -79,9 +40,6 @@ Route::prefix('RentalMobil')->group(function () {
 
     Route::get('sewa', function () {
         return view('user.sewa');
-    })->middleware('auth');
-    Route::get('riwayat', function () {
-        return view('user.riwayat');
     })->middleware('auth');
 
     // login

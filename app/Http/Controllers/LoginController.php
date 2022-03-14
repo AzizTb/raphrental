@@ -21,11 +21,10 @@ class LoginController extends Controller
 
         if(Auth::attempt($credentials)){
             $request->session()->regenerate();
-            if(auth()->guest()){
+            if(auth()->guest() || !auth()->user()->is_admin){
                 return redirect()->intended('RentalMobil/beranda');
-            } elseif(!auth()->user()->is_admin){
-                return redirect()->intended('RentalMobil/admin/dashboard');
-            } return redirect()->intended('RentalMobil/beranda');
+            }
+            return redirect()->intended('RentalMobil/admin/dashboard');
         }
 
         return back()->with('LoginError', 'Username atau Password Salah!');

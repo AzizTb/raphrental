@@ -11,7 +11,7 @@
             @auth
             <a href="/RentalMobil/mobiluser" class="text-sm text-gray-700 dark:text-gray-500 underline">Mobil</a>
             <a href="/RentalMobil/driveruser" class="text-sm text-gray-700 dark:text-gray-500 underline">Driver</a>
-            {{-- <a href="/RentalMobil/sewa" class="text-sm text-gray-700 dark:text-gray-500 underline">Sewa</a> --}}
+            <a href="/RentalMobil/sewa" class="text-sm text-gray-700 dark:text-gray-500 underline">Sewa</a>
         <ul>
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toogle" id="navbarDropdown" role="button"

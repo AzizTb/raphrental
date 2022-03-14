@@ -36,7 +36,7 @@
                         <div class="form-group">
                             <label for="">Masukan Tanggal Sewa</label>
                             <input type="date" name="tgl_sewa" class="form-control @error('tgl_sewa') is-invalid @enderror">
-                             @error('tgl_sewa')
+                            @error('tgl_sewa')
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{ $message }}</strong>
                                 </span>
